@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reveal Blast — Privacy Policy</title>
-<style>body{font-family:-apple-system,system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8em}a{color:#c65b45}</style>
+<style>body{font-family:-apple-system,system-ui,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.8em}a{color:#c65b45}ul{padding-left:1.2em}</style>
 </head>
 <body>
 <h1>Privacy Policy — Reveal Blast</h1>
-<p><em>Last updated: 24 July 2026</em></p>
+<p><em>Last updated: 6 August 2026</em></p>
 
 <p>Reveal Blast ("the app", "we") is a block puzzle game. We built it to respect
 your attention and your privacy. This policy explains, in plain language, what
@@ -16,34 +16,89 @@ happens with your data.</p>
 
 <h2>The short version</h2>
 <p>We do not ask for your name, email, or an account. Your game progress is saved
-only on your device. We show a small number of ads and offer a one-time
-"Remove Ads" purchase. That's it.</p>
+only on your device. We collect anonymous statistics about how the game is played
+so we can improve it, plus crash reports when something goes wrong — and you can
+switch both off in Settings. Some versions show a small number of ads, and there
+is a one-time "Remove Ads" purchase. That's it.</p>
 
-<h2>What we store</h2>
+<h2>What we store on your device</h2>
 <p>Your game progress, settings, and purchases are stored <strong>locally on your
-device</strong>. We do not run our own servers and we do not collect this data.
-Deleting the app removes it.</p>
+device</strong>. We do not run our own servers, and your saved game is never
+uploaded anywhere. Deleting the app removes it.</p>
+
+<h2>Anonymous game statistics</h2>
+<p>To understand whether the game actually works — whether puzzles are too hard,
+whether a screen is confusing, whether a feature is used at all — we send
+anonymous event data to <strong>PostHog</strong>, an analytics service acting as
+our processor.</p>
+<p>What is sent is a fixed, short list of gameplay events, such as: a game
+started or ended (with the score, lines cleared, and how long it lasted), a
+board fully cleared, a daily puzzle completed, an item bought with in-game
+coins, and whether a purchase or restore succeeded. Each event carries a random
+identifier generated on your device the first time you open the app, so we can
+tell one player's session from another's without knowing who anyone is.</p>
+<p>Just as important is what is <strong>not</strong> sent:</p>
+<ul>
+<li><strong>No location.</strong> We explicitly instruct PostHog not to look up
+your location from your IP address, and not to record the address itself.</li>
+<li><strong>No free text.</strong> Events carry only fixed labels and numbers.
+There is no way for a message, a name, or anything you type to end up in them.</li>
+<li><strong>No advertising identifier</strong>, and no profile built about you.</li>
+<li><strong>No screen recording</strong>, no session replay, and no tracking of
+individual taps.</li>
+<li><strong>Nothing linked to an identity</strong>, because the app has no
+accounts and never asks who you are.</li>
+</ul>
+<p>The random identifier is stored in the app's own storage and disappears when
+you delete the app. This data is processed on PostHog's servers in the
+<strong>United States</strong>, which means that if you are in the EU or UK, it
+is transferred outside your region. See PostHog's privacy policy at
+<a href="https://posthog.com/privacy">posthog.com/privacy</a>.</p>
+<p><strong>You can turn this off.</strong> Settings &rsaquo; Privacy &rsaquo;
+"Share anonymous statistics" stops it, and stops crash reports with it. Switching
+it off is a real off switch, not a filter: from the next launch the analytics
+software is not started at all, so nothing is sent and no identifier is used.
+The same screen shows you your anonymous identifier, so you can quote it if you
+ever want to ask us about your data.</p>
+
+<h2>Crash reports</h2>
+<p>When the app crashes, a report is sent through the same service so we can find
+and fix the bug. It contains technical information about the failure — where in
+the code it happened, the device model, and the app and iOS version. It does not
+contain your saved game or anything you typed.</p>
 
 <h2>Ads</h2>
-<p>To keep the game free, we show ads through <strong>AppLovin MAX</strong> and its
-advertising partners. To serve and measure ads, these partners may process
-device information such as an advertising identifier, approximate location, and
-app-usage data. On first launch we ask your permission (Apple's App Tracking
-Transparency prompt) before any tracking — you can decline, and the game plays
-exactly the same. Buying "Remove Ads" turns ads off entirely. See AppLovin's
-privacy policy at <a href="https://www.applovin.com/privacy/">applovin.com/privacy</a>.</p>
+<p>Some versions of the game show a small number of ads, through
+<strong>AppLovin MAX</strong> and its advertising partners. To serve and measure
+ads, these partners may process device information such as an advertising
+identifier, approximate location, and app-usage data. Where required, we ask your
+permission first (Apple's App Tracking Transparency prompt) before any tracking —
+you can decline, and the game plays exactly the same. Buying "Remove Ads" turns
+ads off entirely. See AppLovin's privacy policy at
+<a href="https://www.applovin.com/privacy/">applovin.com/privacy</a>.</p>
+<p>This is separate from the anonymous statistics above: ad partners are their
+own companies with their own policies, and the analytics described above never
+receive your advertising identifier.</p>
 
 <h2>Purchases</h2>
 <p>The "Remove Ads" purchase is handled entirely by <strong>Apple's App Store</strong>.
-We never see or store your payment details.</p>
+We never see or store your payment details. We do record, anonymously, that a
+purchase or restore happened and whether it succeeded.</p>
 
 <h2>Children</h2>
 <p>Reveal Blast is intended for a general audience and is not directed at children
 under 13. We do not knowingly collect personal information from children.</p>
 
 <h2>Your choices</h2>
-<p>You can decline ad tracking when asked, reset or limit your advertising identifier
-in iOS Settings &rsaquo; Privacy &amp; Security, or buy "Remove Ads" to stop ads.</p>
+<p>You can switch off anonymous statistics and crash reports in the game's own
+Settings &rsaquo; Privacy. You can decline ad tracking when asked, reset or limit
+your advertising identifier in iOS Settings &rsaquo; Privacy &amp; Security, or
+buy "Remove Ads" to stop ads. Deleting the app removes everything stored on your
+device,
+including the random analytics identifier — after that, nothing further is sent,
+and a reinstall starts from a new identifier that cannot be connected to the old
+one. If you have a question or a request about your data, email us at the address
+below.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, we'll update the date above.</p>
